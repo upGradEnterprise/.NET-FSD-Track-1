@@ -1,0 +1,187 @@
+Source Management Tools / Versioning  Tools
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+1.  SVN
+2.  TFS / Visual Source Safe
+3.  GIT
+
+
+
+Installation Phase
+~~~~~~~~~~~~~~~
+1.  Git account --- Register  --- https://github.com/
+
+		----  organizing remote repositories
+
+
+2.  Install Git ---  Git bash / Software   ---   https://git-scm.com/download/win
+
+		----  organizing local repositories
+---------------------------------------------------------------------------------------------------
+
+
+Working with local repositories  (Git bash)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+>    cd  /c							(Change the drive)
+>    cd   MyGitTest			(Change the directory)
+>	  clear 								(to clear the screen)
+
+1.   git  init
+2.   git status
+
+	Note:  Use touch command to create new files
+	
+		>   touch  Demo1.java 						// it create new file in the current directory
+		>   touch  Program.cs
+		
+3.   git add  Demo1.java
+	  git add  Program.cs
+	  .....
+	 git status 
+	  git  add  -A			(To move all updated files to staging area)
+	  git status 
+	  
+4.  git commit  -m "commit message"	  
+
+	git commit  -m "Initial files for WebApp Development"
+	git commit  -m "Added first file - Demo1.java"
+	
+	git status 
+-----------------------------------------------------------------------------------------------------------------	
+	  
+  
+Creating Remote Repository  (Github)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+1. Login in github
+2. Go to repositories  --> Click "New"
+3. Provide required details:
+
+		a.  Repository Name
+		b.  Choose Public  / Private
+		c.   Check "Add a README file" checkbox
+		d.   Click "Create Repository" button
+		
+		
+		
+https://github.com/tnrao-trainer/MyGitTestRepo1310.git
+https://github.com/tnrao-trainer/MyGitTestRepo1310.git
+-----------------------------------------------------------------------------------------------------		
+
+	
+Working with Remote Repository (Pull / Push)	
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Set  remote origin:
+		
+		Syntax:  git  remote  add  origin  "git_rep_url"		
+		>	Eg:   git remote add origin  "https://github.com/tnrao-trainer/MyGitTestRepo2104.git"		
+				
+		To update remove repository Url:
+		
+		>  git remote set-url origin  "https://github.com/tnrao-trainer/MyGitTestRepo2104.git"	
+		>	git remote set-url origin  "https://github.com/tnrao-trainer/TestRepo2010.git"
+		
+Pull data from remote repository:	
+		Syntax:   git pull origin branchName			
+		Eg:		 >  git pull origin master			
+					
+Push the updated/new files to remote repository:
+		Syntax:  		   git push origin branchName			
+		Eg:				> git push origin master	
+				
+Get the current  repository:
+		> git   remote   -v
+		
+Delete remote origin settings:
+		>   git remote remove origin
+		
+		
+----------------------------------------------------------------------------------------------------		
+		
+		
+		
+Order of the git commands execution
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Go to the directory 
+>  	git init 		
+
+>		git remote  -v
+>      git remote add origin  "https://github.com/tnrao-trainer/MyGitTestRepo1310.git" 
+>     git remote  -v
+
+>     git pull origin master		
+       git pull origin main
+
+		//  Add the extra files in the working directory 
+		// Modify the files 
+		
+				a.  EmpClass.cs    (Add New)
+				b.  Program.cs    	(Edit)
+				 
+
+>		git  add   EmpClass.cs			( specific file)
+		git  add  -A										(All Files)
+	
+> 		git   commit   -m "Add New class Employee and used in Program.cs"
+
+>      git push origin master	
+		--->	push the committed files to central repository 
+		
+	----------------------------------------------------------------------------------------------------------------------		
+
+
+
+Assignment-1
+~~~~~~~~~~~~
+	1.   Environment Setup:		
+			a.  local git install  
+			b.  create github account   (ignore if you have already)
+			
+	2.   Create remote repository	
+	3.   Add the required files
+				a.  emp.component.ts
+				b.  emp.component.html
+				
+	4.   Pull files into local repository
+	5.    Changes in the local repository:
+				a.  Update the emp.componen.html  (Add some html stuff)
+				b.  Add the following files:
+							1.   depts.component.html
+							2.   depts.component.ts
+	
+	7.   Check  status command in every stage 
+	8.  Commit 
+	9.   Push the changes in remote repository 
+	
+	
+	
+	
+	
+
+Note:
+	1. Create another git repository :    Cigna_Training_Assignments  
+		 (Public)
+		 
+	2. Share the repository url to me. 	 
+
+--------------------------------------------------------------------------------------------------
+Git Configuration
+~~~~~~~~~~~~~~~
+--> You can specify Git configuration settings with the git config command.
+--> We can get/set the user details using config command
+
+
+Set user name and user email
+~~~~~~~~~~~~~~~~~~~~~~~~~
+> git config --global user.name "John Doe" 
+> git config --global user.email  "johndoe@example.com"
+
+
+Get user name and user email
+~~~~~~~~~~~~~~~~~~~~~~~~~
+> git config --global user.name 
+> git config --global user.email 
+
+--------------------------------------------------------------------------------------------------------------
