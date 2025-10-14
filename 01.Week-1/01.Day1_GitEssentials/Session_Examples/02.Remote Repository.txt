@@ -1,0 +1,16 @@
+  
+Creating Remote Repository  (Github)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+1. Login in github
+2. Go to repositories  --> Click "New"
+3. Provide required details:
+
+		a.  Repository Name
+		b.  Choose Public  / Private
+		c.   Check "Add a README file" checkbox
+		d.   Click "Create Repository" button
+		
+		
+https://github.com/tnrao-trainer/MyGitTestRepo1310.git
+https://github.com/tnrao-trainer/MyGitTestRepo1310.git

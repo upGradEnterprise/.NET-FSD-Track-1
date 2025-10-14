@@ -1,0 +1,29 @@
+
+Merging changes of one branch into another branch
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+>   git  checkout  -b  dev	    (Create and shifting the branch)
+>  git  checkout  dev	 (shifting the branch)
+
+Add some files / modify the exists files
+
+> git  add data.services.ts
+> git  commit -m  "data service is added at 4:27 pm" 
+>  git push origin dev
+-------------------------
+> git checkout master
+> git log
+> git merge dev
+> git log
+
+
+
+Differences between multiple branches
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+>  git  checkout  dev	
+	Add some files / modify the exists files
+> git  add data.services.ts
+> git  commit -m  "data service is added at 4:27 pm" 
+
+
+> git checkout master
+> git diff  master dev
