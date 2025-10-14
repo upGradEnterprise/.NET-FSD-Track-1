@@ -32,11 +32,12 @@ CREATE TABLE Borrowings (
     Book_ID NUMBER NOT NULL,
     Member_ID NUMBER NOT NULL,
     Borrow_Date DATE DEFAULT SYSDATE,
-    Due_Date DATE NOT NULL CHECK (Due_Date > Borrow_Date),
+    Due_Date DATE NOT NULL,
     Return_Date DATE,
     Fine NUMBER(10,2) DEFAULT 0 CHECK (Fine >= 0),
     CONSTRAINT fk_book FOREIGN KEY (Book_ID) REFERENCES Books(Book_ID) ON DELETE CASCADE,
-    CONSTRAINT fk_member FOREIGN KEY (Member_ID) REFERENCES Members(Member_ID) ON DELETE CASCADE
+    CONSTRAINT fk_member FOREIGN KEY (Member_ID) REFERENCES Members(Member_ID) ON DELETE CASCADE,
+    CONSTRAINT chk_due_date CHECK (Due_Date > Borrow_Date)
 );
 
 -- DML Operations (Insert, Update, Delete)
@@ -57,4 +58,5 @@ VALUES (2, 'Jane Smith', '456 Elm St, Town', '987-654-3210');
 
 INSERT INTO Borrowings (Borrowing_ID, Book_ID, Member_ID, Due_Date)
 VALUES (1, 1, 1, SYSDATE + 14);
+
  
