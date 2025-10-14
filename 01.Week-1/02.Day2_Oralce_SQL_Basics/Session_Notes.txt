@@ -1,0 +1,80 @@
+
+Oracle Database  :  SQL Programming
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+1.   Oracle Database Server :			Oracle Database XE (21c)
+		https://www.oracle.com/apac/database/technologies/xe-downloads.html
+		
+2.   SQL Developer 	(Editor)
+	https://www.oracle.com/apac/database/sqldeveloper/technologies/download/
+
+
+------------------------------------------------------------------------------------------
+
+
+
+
+
+ CONSTRAINT FK_dept FOREIGN KEY (Deptno) REFERENCES Dept(Deptno)
+
+
+
+
+
+
+
+Library Management Case Study
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+-- Create Authors table
+CREATE TABLE Authors (
+    Author_ID NUMBER PRIMARY KEY,
+    Author_Name VARCHAR2(100) NOT NULL
+);
+
+
+
+
+-- Create Books table
+CREATE TABLE Books (
+    Book_ID NUMBER PRIMARY KEY,
+    Title VARCHAR2(200) NOT NULL,
+    Author_ID NUMBER NOT NULL,
+    ISBN VARCHAR2(13) UNIQUE NOT NULL,
+    Publication_Year NUMBER(4) CHECK (Publication_Year > 1900),
+    Available_Copies NUMBER DEFAULT 1 CHECK (Available_Copies >= 0),
+    CONSTRAINT fk_author FOREIGN KEY (Author_ID) REFERENCES Authors(Author_ID)  
+);
+
+
+
+ CONSTRAINT fk_author FOREIGN KEY (Author_ID) REFERENCES Authors(Author_ID)  
+
+-- Create Members table
+CREATE TABLE Members (
+    Member_ID NUMBER PRIMARY KEY,
+    Member_Name VARCHAR2(100) NOT NULL,
+    Address VARCHAR2(200),
+    Phone VARCHAR2(15) UNIQUE,
+    Membership_Date DATE DEFAULT SYSDATE
+);
+
+
+
+CREATE TABLE Borrowings (
+    Borrowing_ID NUMBER PRIMARY KEY,
+    Book_ID NUMBER NOT NULL,
+    Member_ID NUMBER NOT NULL,
+    Borrow_Date DATE DEFAULT SYSDATE,
+    Due_Date DATE NOT NULL CHECK (Due_Date > Borrow_Date),
+    Return_Date DATE,
+    Fine NUMBER(10,2) DEFAULT 0 CHECK (Fine >= 0),
+    CONSTRAINT fk_book FOREIGN KEY (Book_ID) REFERENCES Books(Book_ID) ON DELETE CASCADE,
+    CONSTRAINT fk_member FOREIGN KEY (Member_ID) REFERENCES Members(Member_ID) ON DELETE CASCADE
+);
+
+ 
+
