@@ -1,0 +1,28 @@
+Working with   local repositories  (Git bash)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+>    cd  /c							(Change the drive)
+>    cd   MyGitTest			(Change the directory)
+>	  clear 								(to clear the screen)
+
+1.   git  init
+2.   git status
+
+	Note:  Use touch command to create new files
+	
+		>   touch  Demo1.java 						// it create new file in the current directory
+		>   touch  Program.cs
+		
+3.   git add  Demo1.java
+	  git add  Program.cs
+	  .....
+	 git status 
+	  git  add  -A			(To move all updated files to staging area)
+	  git status 
+	  
+4.  git commit  -m "commit message"	  
+
+	git commit  -m "Initial files for WebApp Development"
+	git commit  -m "Added first file - Demo1.java"
+	
+	git status 
+-----------------------------------------------------------------------------------------------------------------	
