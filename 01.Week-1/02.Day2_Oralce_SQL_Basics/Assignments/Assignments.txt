@@ -1,0 +1,10 @@
+
+
+
+1.   Check the 15 Queries that we discussed on the Library Management Case Study
+2.   Create sql scripts to create the tables for Inventory Management.  Refer the Case Study document
+ 
+
+		
+
+
