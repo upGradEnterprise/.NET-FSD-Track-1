@@ -1,0 +1,71 @@
+
+ 
+
+CREATE TABLE Dept
+(
+	Deptno NUMBER PRIMARY KEY,
+	Dname VARCHAR2(50),
+	Loc VARCHAR2(50) 
+);
+
+
+INSERT INTO Dept VALUES (10,'ACCOUNTING','NEW YORK');
+INSERT INTO Dept VALUES (20,'RESEARCH','DALLAS');
+INSERT INTO Dept VALUES (30,'SALES','CHICAGO');
+INSERT INTO Dept VALUES (40,'OPERATIONS','BOSTON');
+INSERT INTO Dept VALUES (40,'TESTING','CHICAGO');
+ 
+SELECT * FROM Dept;
+
+DROP TABLE Dept;	-- Delete data and structure of the table 
+---------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+CREATE TABLE Emps
+(
+	Empno NUMBER PRIMARY KEY,
+	Ename VARCHAR2(50),
+	Job   VARCHAR2(50),
+	Salary   FLOAT,
+	Deptno NUMBER,	 
+    CONSTRAINT fk_dept FOREIGN KEY (Deptno) REFERENCES Dept(Deptno)
+) 
+
+DROP TABLE Emps
+
+
+SELECT * FROM Emps
+SELECT * FROM Emps WHERE Deptno=20
+SELECT * FROM Emps WHERE job = 'SALESMAN'
+SELECT * FROM Emps WHERE salary < 1300
+
+SELECT Ename FROM Emps
+SELECT Ename FROM Emps WHERE Empno=7369
+SELECT Ename, job  FROM Emps WHERE Empno=7369
+SELECT Ename, job  FROM Emps 
+
+INSERT INTO Emps VALUES(7369,'SMITH','CLERK',800, 20);
+INSERT INTO Emps VALUES(7499,'ALLEN','SALESMAN',1600,30);
+INSERT INTO Emps VALUES(7521,'WARD','SALESMAN',1250,30);
+INSERT INTO Emps VALUES(7566,'JONES','MANAGER',2975,20);
+
+
+
+
+ 
+
+
+
+
+
+
+
+
