@@ -1,0 +1,26 @@
+
+1. Prepare schemas for Emps, Dept table.
+
+		Dept :  Deptno, Dname, Loc
+		Emps :  Empno, Ename, Job, Sal,  Deptno 
+		
+Hint :  Insert some records 
+
+
+2.  Check the sub-queries that we discussed in the session (Refer the document). 
+	 Make sure that all queries should work, Let me know if any issues. 
+
+3.  Write the queries for the following requirements using joins, subqueries on the above tables:
+
+		
+		a.   Display employee names along with their department names.
+		b.   List all employees with their job titles and the location of their department.
+	    c.    Display employees who work in the SALES department.
+		d.  List all employees along with their department name and location, including departments that have no employees.
+		e.  Display all departments and employees, even if some employees are not assigned to any department.
+		
+	   f. Show each department name and  total salary paid to its employees.
+	   g.  Find departments that have more than 3 employees.  Display dname and no. of employees.
+	   h.  Display employees who work in the same location as the ACCOUNTING department.
+       i.  For each department, display the employee who has the highest salary.
+	   j.  List employees whose salary is greater than the average salary of their department.
