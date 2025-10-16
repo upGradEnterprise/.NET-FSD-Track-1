@@ -99,7 +99,8 @@ DECLARE
     emp_salaries emp_sal_tab;  --  array declaration of type emps.sal
     
 BEGIN
-
+   --  In the below statement rec is emps%ROWTYPE variable that will implicitly delcared
+    
    FOR rec IN (SELECT empno, sal FROM emps) LOOP
       emp_salaries(rec.empno) := rec.sal * 1.1; -- give 10% raise
    END LOOP;
@@ -108,5 +109,6 @@ BEGIN
    DBMS_OUTPUT.PUT_LINE('Saved salaries in memory.'); 
    
 END;
+
 
 
