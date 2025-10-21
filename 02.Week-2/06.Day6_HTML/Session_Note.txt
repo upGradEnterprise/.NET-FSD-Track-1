@@ -99,5 +99,36 @@ Head Section Tags
 ------------------------------------------------------------------------------------------------------------------------------------
 
  
-
+ Data Entry Forms in HTML
+ ~~~~~~~~~~~~~~~~~~~~~~~
+  
+ ->    form, input,  textarea,  select 
+ ->   form :   action,   method  (GET/POST)
+ ->   input :    type,   id,  name,   value
+ 
+		<input type="text"   id="t1"  name="t1"    />
+		<input type="button"  id="button1"  name="button1"   value="Login"   />
+		<input type="password"   ....   />
+ 
+ 
+ 
+ Gender :    
+						<input  type="radio" id="r1"  name="r1"  value="Male"  />  Male
+						<input  type="radio" id="r2"  name="r1" value="Female"  />  Female					
+						<br/><br/>
+						
+						
+						
+						
+		Qualification :   
+						<select  name="s1"  id="s1">
+							<option>B.Tech</option>
+							<option>BCA</option>
+							<option  selected>MCA</option>
+							<option>M.Tech</option>
+							<option>Others </option>
+						</select>
+						<br/><br/>					
+ 
+ 
 
