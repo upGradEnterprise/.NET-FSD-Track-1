@@ -1,0 +1,14 @@
+Assignments
+~~~~~~~~~~~
+
+1.  Create a web page to create credit card payment screen (Refer the image for details).
+2.  Create a web page to develop pizza order page  (Refer the image for details)
+
+Hint:  CSS is optional in the above assignments, focus on the functionality.  
+
+
+3.  Check the below questions on the internet: 
+		a. Why do we use value attribute of <option> tag?
+		b. What is <input type="hidden"  />  ? Why do we use?
+		c. What are the table related tags in HTML?
+
