@@ -1,0 +1,103 @@
+ 
+Day-6  (21st  Oct, 2025)
+===============================
+
+  
+Develop web page using HTML
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+1.  Create a html document using any editor. 
+2.  Save the file as  *.html
+3.  Execute:   Open the html file in browser (double click on html file)
+-----------------------------------------------------------------------------------------------------
+
+
+
+HTML Tags and Attributes
+~~~~~~~~~~~~~~~~~~~~~~~
+
+1.  Tags
+		a. Single Tags
+				<hr/>,   <img /> , <br/>,  <input />, etc...
+				
+		b. Pair Tags
+				<html></html>	
+				<body></body>
+				<p></p>
+				<h1></h1>
+				<div></div>
+				etc...
+		
+		
+2.  Attributes:
+		<h1  align="center">Hello World</h1>
+		<img  src="Image1.jpg"    width="250"   />		
+------------------------------------------------------------------------------------
+		
+Coding Standards
+~~~~~~~~~~~~~~~
+	a.   All tags and attributes should be in lowercase. 
+	b.   Attribute values should be in double quotations
+	c.    Multiple attributes are separate with spaces
+	d.    Tags should close properly.
+				<h1></h1>	...    correct
+				<h1>   ....	wrong
+				<h1      ....	wrong
+				<h1><h1>      ....	wrong
+				<hr/>  	...  correct
+				<hr>  	...  wrong	
+	e.  Provide title for the document using title tag. 
+	 f.  Img tag should provide value for alt attribute
+-------------------------------------------------------------------------------------------
+
+
+Head Section Tags
+~~~~~~~~~~~~~~~~
+1.   title			
+2.   script		---		javascript
+3.   style			---		css
+4.   link			---		linking external files
+5.   meta 		---		meta data about the web page
+----------------------------------------------------------------------------------------
+
+
+1.  title:	
+				<title>Welcome Page</title>
+				<title>Welcome Page -- Facebook</title>
+				<title>Welcome Page -- Gmail</title>
+				<title>Login Page</title>
+				
+2.  style:   provide styles to the document at page level.
+	
+					<style>
+								h1
+								{
+									 color : blue;
+								}
+					</style>
+					
+3.    script:     Used to add javascript in your web page.
+
+						<script>
+								// javascript code here 
+						</script>
+						
+						
+4.     meta  tag:		Data about your web page.  
+
+		<meta name="description"  content="This is Welcome Page demonstrate usage of html tags" />		
+	  <meta name="keywords"  content="HTML, CSS, javascript, jQuery, Bootstrap, React JS, Angular" />
+
+5.  Link:			linking external files with your web Page
+
+					<link    href="MyStyles.css"  type="stylesheet" />
+					<link    href="Bootstrap.min.css"  type="stylesheet" />
+
+				Note:   You cannot import javascript using link tag. 
+								<script  src="MyScripts.js"></script>
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+ 
+
+
