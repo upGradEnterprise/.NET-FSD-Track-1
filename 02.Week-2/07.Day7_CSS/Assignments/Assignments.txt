@@ -1,0 +1,39 @@
+Shopping Cart Web Page
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+Objective:
+		Create a simple Shopping Cart web page using HTML and CSS that displays products and allows users to view selected items in their cart.  A well-structured web page that visually looks like a small online store with a shopping cart layout — no actual functionality (like adding items) is required.
+
+
+Requirements:
+
+1. Page Structure (HTML):
+
+   * Create a main page titled “My Shopping Cart”.
+   * Display at least 5-6 products.
+   * Each product should include:
+
+     * Product image
+     * Product name
+     * Short description
+     * Price
+     * A “Add to Cart” button (only for design, no JavaScript needed).
+    
+
+2. Styling (CSS):
+
+   * Use a responsive layout (use Flexbox or Grid).
+   * Style product cards with borders, shadows, and padding.
+   * Use a consistent color scheme (e.g., pastel or minimal theme).
+   * Make buttons look interactive (hover effects).
+   * Ensure text is readable and neatly aligned.
+
+3. Other Requirements :
+
+   * Add a navigation bar with links like “Home”, “Shop”, “Cart”, “Contact”.
+   * Add a footer with simple copyright text.
+   * Include a responsive design so it looks good on mobile and desktop.
+   * Add required semantic tags from HTML
+
+ 
+ 
