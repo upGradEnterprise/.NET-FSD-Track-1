@@ -1,0 +1,109 @@
+
+JavaScript Programming Basics
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+// Old way of concatenation
+        console.log("User Name: " + uname + ", Email: " + email + ", Age: " + age + ", Member: " + isMember);       
+
+// Using string literals 
+	console.log(`User Name :  ${uname} , Age :   ${age}`);
+	
+	
+	<p id="info"></p>
+	
+	
+	document.getElementById("info").innerText  =  "Hello";
+	
+	stdObj.Name  =  "Narasimha";
+	
+	
+	
+	
+	
+	 <input type="button" onClick={showUserInfo} value="Show User Info" />
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 <input type="text"  value=""  />
+	 
+1. Single tags :   img,  input
+		
+		value 	for input tag   :   input, select,  textarea 
+		src   for img tag 
+		....
+				
+	
+2. Pair Tags 	:		p, div, li, td, ......  
+
+		----  innerText  / innerHTML 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+
+Task
+~~~~~~	 
+1.   Create a html page to display hello world message in the paragraph on button click event.
+
+
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	  function checkUserDetails() {
+		  
+        let uname =  document.getElementById("uname").value;
+        let password =  document.getElementById("password").value;  
+		
+		if(   uname == "admin"  &&  password == "admin123" )
+		{
+				document.getElementById("info").innerText = `Welcome   ${uname}`;
+				document.getElementById("info").style.color =  "Green";
+		}
+		else
+		{
+			document.getElementById("info").innerText = `Invalid User Id or Password`;
+				document.getElementById("info").style.color =  "Red";
+		}
+       
+      }
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  let i = 1;
+	  
+	  while( i <= 10 )
+	  {
+		   document.getElementById("info").innerText  = i;
+	  }
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
