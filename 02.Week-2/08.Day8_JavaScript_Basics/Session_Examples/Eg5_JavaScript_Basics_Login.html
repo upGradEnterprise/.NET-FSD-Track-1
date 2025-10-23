@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>JavaScript Basics</h1>
+    <hr/>
+
+    <fieldset>
+        <legend>User Information</legend>
+        <label for="uname">User Name:</label>
+        <input type="text" id="uname" name="uname"><br><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" /><br><br> 
+
+         <button onclick="checkUserDetails()">Login</button>
+          <p id="info"></p>
+    </fieldset>
+        
+    
+   
+
+    <hr/>
+    <footer>Copyright © 2025 JavaScript Basics</footer>
+    
+    <script>      
+      
+       function checkUserDetails() {
+		  
+        let uname =  document.getElementById("uname").value;
+        let password =  document.getElementById("password").value;  
+		
+        if(   uname == "admin"  &&  password == "admin123" )
+        {
+            document.getElementById("info").innerText = `Welcome   ${uname}`;
+            document.getElementById("info").style.backgroundColor =  "Green";
+            document.getElementById("info").style.color =  "White";
+        }
+        else
+        {
+          document.getElementById("info").innerText = `Invalid User Id or Password`;
+          document.getElementById("info").style.backgroundColor =  "Red";
+          document.getElementById("info").style.color =  "White";
+        }
+       
+      }
+
+    </script>
+
+     
+
+</body>
+</html>

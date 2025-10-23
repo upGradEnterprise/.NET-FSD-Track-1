@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>JavaScript Basics</h1>
+    <hr/>
+ 
+    <button onclick="showData()">Show Data</button>
+    
+    <p id="info"></p>
+
+    <hr/>
+    <footer>Copyright © 2025 JavaScript Basics</footer>
+    
+    <script>      
+      
+      function showData() {
+
+         let i = 1;
+         let str = "";
+	  
+         /*
+            while( i <= 10 )
+            {
+              str  += `This line number : ${i} <br/>`;
+              i++;
+            }
+        */
+
+        for( i = 10; i >= 1; i-- )
+        {
+          str  += `This line number : ${i} <br/>`;
+        }
+
+         document.getElementById("info").innerHTML  = str
+
+      }
+
+    </script>
+
+     
+
+</body>
+</html>
