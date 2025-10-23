@@ -1,0 +1,31 @@
+Assignments
+~~~~~~~~~~~
+1  Update the Login login example to apply add the following requirement:  
+		-- If the user enter 3 times wrong password, we should notify the user. 
+		--  Display the warning message using alert
+		--  Disable the Login button 
+		
+		
+2.   Create a web page to process product details using JavaScript.  Calculate total amount based on the given values.  (Refer the Image)
+
+		a.  Take the confirmation from the user before proceeding the total calculation. 
+
+	Hint :   If qty is more than 10  	---   give 10% discount 
+				 If qty is more than 20  	---   give 15% discount 
+				 If qty is more than 30  	---   give 20% discount 
+				 
+ 
+3.  Create a web page to read the meal price (base cost of a meal) from the user.  Find out the total cost of the meal by adding tip percent (10%), and tax percent (8%) for the base cost of the meal.   Round the result to the nearest integer. 
+		-->    Display all the details on the web page. 
+						Meals Base  Cost :   
+						Tip Amount    :  
+						Tax Amount   :  
+						Total Amount    :   
+		
+		
+4.  Create a web page to define the functions for the following requirements + with UI
+			a.  Function to find average based on the total marks and no. of subjects. 
+			b.  Function to find out power value  ( x power y). Read x and y from user
+			c.   Function to return no. of words in the given string.   Read string from the user. 
+			
+			Hint :  Create separate functions for button clicks and the above functionalities
