@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>    
+</head>
+<body>
+    <h1>Advanced JavaScript - ES6 (Objects) </h1>
+    <hr/>
+
+    <button  onclick="button1Click()">Button-1</button>
+ 
+
+    <hr/>
+
+    <footer>
+        <mark>Note: Check the console window to see the result.</mark>    
+    </footer>
+
+
+    <script>
+        function button1Click(){
+
+            let obj1 = {};
+            let obj2 = new Object();
+
+            let obj3 = { uname : "Scott", age : 30, email : "scott@gmail.com" };
+
+            console.log(obj3);
+
+            console.log(obj3.uname);
+            console.log(obj3.age);
+            console.log(obj3.email);
+
+            obj3.age = 32;
+            console.log(obj3);
+
+
+           for(let key in obj3)
+           {
+                console.log(`Key : ${key} ,  Value : ${obj3[key]}`);
+           }   
+
+
+           
+               
+
+        }
+    </script>
+</body>
+</html>
