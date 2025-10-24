@@ -1,0 +1,106 @@
+Day9:  24th Oct, 2025
+~~~~~~~~~~~~~~~~~~
+
+ES6 -  Advanced JavaScript
+~~~~~~~~~~~~~~~~~~~~~~
+
+>   ECMA Script  6   :   Provide standards for scripting languages
+>   Implemented by JavaScript
+
+
+	a.  Array destructuring 
+	b.  Object destructuring 
+	c.  Default parameters
+	d   string literals 
+	e.   let & const 
+	f.   arrow functions 
+	g.  spread/rest operator 
+	.....
+	
+	
+	
+	
+	
+	
+	
+	
+	let  ar1 =  [];
+	let  ar2 =  [10,20,30,40];
+	let  ar3  =  new Array(5);
+	
+	
+	ar1.length	:		property which returns no. of items in the array 
+	
+	  // access items of array  
+	for(let i = 0; i < ar1.length; i++)
+	{
+		console.log(ar1[i]);
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+ ar1.splice(startIndex, count);
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  Syntax:   
+				let objName = { prop : value, prop : value, ...... };
+				
+				
+  
+  
+  
+  
+  
+ ----------------------------------- 
+    let ar1 = [10,20,30,40];
+            let obj3 = { uname : "Scott", age : 30, email : "scott@gmail.com" };
+                
+            
+            let [x,y,z] = ar1;
+            let {uname, age} = obj3;
+			
+			
+			
+			
+			
+			
+	getTotalAmount(1500, 3);
+	getTotalAmount(2500);	
+	
+	// default function parameters 
+	function  getTotalAmount(price, qty = 1)
+	{		
+	
+	}
+	-----------------------------------------------------------------------
+	Usage of spread operator 
+	~~~~~~~~~~~~~~~~~~~~~
+	
+	function  sum(...arr)
+	{
+		
+	}
+	
+	sum(10,20);
+	sum(10,20, 30);
+	sum(10);
+	sum(10,20,30,40,50,60,70, 80, 90, 100);	
+	sum(10,20,30,40);
+	sum();
+	-------------------------
