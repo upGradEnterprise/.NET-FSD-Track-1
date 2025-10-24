@@ -1,0 +1,12 @@
+1.   Create a web page to implement the following requirement using JavaScript.
+		a.   Create a collection of course names using array
+		b.   Provide separate buttons to perform : Show , Add, Remove
+		c.    Show -- display the avaialbel courses in list format
+		d.    Add --  add new course (read course name from user using textbox)
+		e.    Remove --  remove the course that entered in textbox 
+		
+
+2.   Update the Array of Students Objects Example (i.e Eg-7)  so that display the details in table format. 
+
+3.  Add the following requirement on the above example. Filter the data based on the course. 
+	Hint :  Use filter() method to filter data
