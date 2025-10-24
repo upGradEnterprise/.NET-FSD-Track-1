@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>    
+</head>
+<body>
+    <h1>Advanced JavaScript - ES6 (Array of Objects)</h1>
+    <hr/>
+
+    <button  onclick="button1Click()">Button-1</button>
+    <hr/>
+
+    <ul id="list1">        
+    </ul>
+ 
+
+    <hr/>
+
+    <footer>
+        <mark>Note: Check the console window to see the result.</mark>    
+    </footer>
+
+    <script> 
+
+        function button1Click(){ 
+
+
+            let studentsArray = [
+                {id : 10256, name : "Scott", course : "React"},
+                {id : 10257, name : "Scott", course : "Angular"},
+                {id : 10258, name : "Scott", course : "Vue"},
+                {id : 10259, name : "Scott", course : "Node"},
+                {id : 10260, name : "Scott", course : "Express"},
+            ];
+
+
+            let lstObj = document.getElementById("list1");
+            
+            let str = "";
+
+            for(let item of studentsArray)
+            {
+               str += `<li>Mr./Mrs. ${item.name} joined in ${item.course} course</li>`
+                // console.log(`Mr./Mrs. ${item.name} joined in ${item.course} course`);
+            }
+
+            lstObj.innerHTML = str;
+
+ 
+        }
+    </script>
+</body>
+</html>
