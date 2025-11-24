@@ -1,0 +1,39 @@
+version: "3.9"
+
+services:
+
+  oracle-db:
+    image: gvenzl/oracle-xe:21-slim
+    container_name: oracle-db
+    environment:
+      ORACLE_PASSWORD: MyPassword123
+      APP_USER: appuser
+      APP_USER_PASSWORD: MyPassword123
+    ports:
+      - "1521:1521"        # Oracle Listener
+      - "5500:5500"        # EM Express (optional)
+    volumes:
+      - oracle-data:/opt/oracle/oradata
+    healthcheck:
+      test: ["CMD", "bash", "-c", "echo 'SELECT 1 FROM DUAL;' | sqlplus -s appuser/MyPassword123@localhost/XEPDB1"]
+      interval: 30s
+      timeout: 10s
+      retries: 10
+
+  webapi:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: webapi
+    depends_on:
+      oracle-db:
+        condition: service_healthy
+    environment:
+      ConnectionStrings__Default: "User Id=appuser;Password=MyPassword123;Data Source=oracle-db:1521/XEPDB1"
+      ASPNETCORE_ENVIRONMENT: Development
+    ports:
+      - "8080:8080"
+    restart: always
+
+volumes:
+  oracle-data:

@@ -1,0 +1,36 @@
+# ============================
+# 1. Build Stage
+# ============================
+FROM node:18-alpine AS build
+WORKDIR /app
+
+# Copy package files
+COPY package*.json ./
+
+# Install dependencies
+RUN npm install
+
+# Copy the rest of the project
+COPY . .
+
+# Build the React app
+RUN npm run build
+
+# ============================
+# 2. Serve Stage (Nginx)
+# ============================
+FROM nginx:alpine AS production
+WORKDIR /usr/share/nginx/html
+
+# Remove default Nginx files
+RUN rm -rf ./*
+
+# Copy build output to Nginx
+COPY --from=build /app/dist .   # for Vite
+ 
+
+# Expose port
+EXPOSE 80
+
+# Start Nginx
+CMD ["nginx", "-g", "daemon off;"]
