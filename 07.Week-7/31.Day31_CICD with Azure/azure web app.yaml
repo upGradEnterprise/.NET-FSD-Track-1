@@ -1,0 +1,58 @@
+name: Build and Deploy ASP.NET Core Web API to Azure
+
+on:
+  push:
+    branches:
+      - main          # Trigger on push to main
+  pull_request:
+    branches:
+      - main          # Also run on PRs (good for testing)
+
+env:
+  AZURE_WEBAPP_NAME: ${{ secrets.AZURE_WEBAPP_NAME }}
+  DOTNET_VERSION: ${{ secrets.DOTNET_VERSION }}   # e.g., 8.0.x
+  WORKING_DIRECTORY: .                            # Change if .sln is in subfolder
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Setup .NET SDK
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: ${{ env.DOTNET_VERSION }}
+
+    - name: Restore dependencies
+      run: dotnet restore
+      working-directory: ${{ env.WORKING_DIRECTORY }}
+
+    - name: Build
+      run: dotnet build --no-restore --configuration Release
+      working-directory: ${{ env.WORKING_DIRECTORY }}
+
+    - name: Run Tests
+      run: dotnet test --no-build --configuration Release --logger trx --collect:"XPlat Code Coverage"
+      working-directory: ${{ env.WORKING_DIRECTORY }}
+
+    - name: Publish Artifact
+      run: dotnet publish --no-build --configuration Release --output ./output
+      working-directory: ${{ env.WORKING_DIRECTORY }}
+
+    - name: Deploy to Azure Web App
+      uses: azure/webapps-deploy@v3
+      with:
+        app-name: ${{ env.AZURE_WEBAPP_NAME }}
+        slot-name: production
+        package: ./output
+        publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
+
+    - name: Deployment Success Notification
+      if: success()
+      run: echo "API deployed successfully! 🚀 https://${{ env.AZURE_WEBAPP_NAME }}.azurewebsites.net/swagger"

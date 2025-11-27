@@ -1,0 +1,25 @@
+
+
+
+Sample Reference Git-repo:
+	https://github.com/Azure-Samples/dotnet-sample
+	https://github.com/Azure-Samples/dotnet_core_sample
+	
+	
+	
+	
+
+CI/CD using Azure with Github actions for DotNet API 
+https://www.youtube.com/watch?v=7LkRipTlTzc
+
+
+
+CI/CD using Azure with Github actions for React API 
+https://www.youtube.com/watch?v=5jkXR6pa1OA
+
+
+
+
+using Azure DevOps CI/CD Pipeline
+https://www.youtube.com/watch?v=XTjV483nIuQ
+https://www.youtube.com/watch?v=eOQL0nXQlLs
